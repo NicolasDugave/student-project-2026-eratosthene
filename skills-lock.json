@@ -154,7 +154,7 @@
     "observable-framework-lib-deckgl": {
       "source": "spqw/skill-observable-framework",
       "sourceType": "github",
-      "computedHash": "7b15865e11329552aa7e6cf84233b72f5d71f0f9fe710fabdaff49da25ab878a"
+      "computedHash": "583d4799d677e105956f6e139e45338e7151d33175acc5bd778d35bf6c8fccce"
     },
     "observable-framework-lib-dot": {
       "source": "spqw/skill-observable-framework",

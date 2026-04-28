@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "funiculaire",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": null }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 6.626533086686551, 46.507145816052017 ], [ 6.627358921298179, 46.50976910191126 ], [ 6.628502384606587, 46.513616358826553 ], [ 6.629328219218213, 46.516531676818964 ], [ 6.62969349221951, 46.517769341849288 ], [ 6.63047168252662, 46.520118915341655 ] ] ] } }
+]
+}

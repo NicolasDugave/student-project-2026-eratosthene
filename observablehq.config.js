@@ -41,7 +41,14 @@ export default {
       pages: [
         { name: "Cadastre Rénové (1888)",      path: "/examples/10-lausanne-cadastre-renove" },
       ]
-    }
+    },
+    {
+      name: "6 - Tests",
+      pages: [
+        { name: "Cartes",      path: "/examples/11-test-carte" },
+        { name: "Slider",      path: "/examples/12-slider" }
+      ]
+    },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:

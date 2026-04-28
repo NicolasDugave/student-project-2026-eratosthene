@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "NAV_station_2000",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "ALT": 373, "COMM_NOM": "Lausanne", "COMM_OFS": 5586, "COOR_X": 2537684, "COOR_Y": 1150804, "ETC": "(CGN)", "ID_STATION": "1075", "LIGNES": "(3150)", "NB_LIGNES": 1, "ST_AFFICHE": 2, "ST_NOM": "Lausanne-Ouchy (lac)", "ST_TYPE": "Régional / touristique", "ST_URL": "https://prestations.vd.ch/pub/101587/api/download/2_Cartographie_et_geodonnees/2.1_Carte_des_reseaux/Fiche_des_stations/TP_STA_1075.pdf" }, "geometry": { "type": "Point", "coordinates": [ 6.626765761070681, 46.505635120254823 ] } },
+{ "type": "Feature", "properties": { "ALT": 373, "COMM_NOM": "Pully", "COMM_OFS": 5590, "COOR_X": 2540326, "COOR_Y": 1150742, "ETC": "(CGN)", "ID_STATION": "1319", "LIGNES": "(3150)", "NB_LIGNES": 1, "ST_AFFICHE": 1, "ST_NOM": "Pully (lac)", "ST_TYPE": "Touristique", "ST_URL": "https://prestations.vd.ch/pub/101587/api/download/2_Cartographie_et_geodonnees/2.1_Carte_des_reseaux/Fiche_des_stations/TP_STA_1319.pdf" }, "geometry": { "type": "Point", "coordinates": [ 6.661199411265593, 46.505319802247683 ] } },
+{ "type": "Feature", "properties": { "ALT": 373, "COMM_NOM": "Saint-Sulpice (VD)", "COMM_OFS": 5648, "COOR_X": 2532661, "COOR_Y": 1151182, "ETC": "(CGN)", "ID_STATION": "1245", "LIGNES": "(3150)", "NB_LIGNES": 1, "ST_AFFICHE": 1, "ST_NOM": "St-Sulpice VD (lac)", "ST_TYPE": "Touristique", "ST_URL": "https://prestations.vd.ch/pub/101587/api/download/2_Cartographie_et_geodonnees/2.1_Carte_des_reseaux/Fiche_des_stations/TP_STA_1245.pdf" }, "geometry": { "type": "Point", "coordinates": [ 6.561284071160828, 46.508547135909417 ] } },
+{ "type": "Feature", "properties": { "ALT": 373, "COMM_NOM": "Lutry", "COMM_OFS": 5606, "COOR_X": 2542056, "COOR_Y": 1150228, "ETC": "(CGN)", "ID_STATION": "1318", "LIGNES": "(3150)", "NB_LIGNES": 1, "ST_AFFICHE": 1, "ST_NOM": "Lutry (lac)", "ST_TYPE": "Touristique", "ST_URL": "https://prestations.vd.ch/pub/101587/api/download/2_Cartographie_et_geodonnees/2.1_Carte_des_reseaux/Fiche_des_stations/TP_STA_1318.pdf" }, "geometry": { "type": "Point", "coordinates": [ 6.683794061856086, 46.500850382601264 ] } }
+]
+}

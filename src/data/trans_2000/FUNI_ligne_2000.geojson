@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "FUNI_ligne_2000",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1 }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 6.626902348948343, 46.507184789467445 ], [ 6.627729578933264, 46.510329692119377 ], [ 6.628714376534359, 46.51363706582999 ], [ 6.62965978223141, 46.517350843941095 ], [ 6.630368836504199, 46.519898836854807 ] ] ] } }
+]
+}
