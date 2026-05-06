@@ -1,118 +1,8 @@
----
-layout: default
----
-
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap");
-
-  .tm-container {
-    width: 90vw !important;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #map {
-    height: 600px;
-    width: 100%;
-  }
-
-  #year-slider {
-    -webkit-appearance: none;
-    width: 100%;
-    background: #3f3f46;
-    height: 12px;
-    border-radius: 999px;
-    outline: none;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .slider-label-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 16px;
-    margin-top: 1.5rem;
-    box-sizing: border-box;
-  }
-
-
-  /* Style the Leaflet popup to look custom */
-  .leaflet-popup-content-wrapper {
-    border-radius: 8px !important;
-    padding: 4px !important;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.4) !important;
-  }
-  .leaflet-popup-content {
-    margin: 10px 12px !important;
-  }
-  .custom-popup h3 {
-    margin-bottom: 2px;
-  }
-</style>
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-
-<script>
-  tailwind.config = {
-    theme: {
-      fontFamily: {
-        sans: "Poppins",
-        serif: "IBM Plex Serif",
-      },
-    },
-  };
-</script>
-
-<div class="tm-container bg-zinc-800" id="top-of-page">
-  
-  <div class="px-8 py-6 flex justify-between items-center text-white border-b border-zinc-700">
-    <div class="w-1/3">
-      <h1 id="date-text" class="text-7xl font-thin">1907</h1>
-    </div>
-    <div class="text-right">
-      <h2 class="text-4xl md:text-5xl italic font-black">Lausanne Time Machine</h2>
-      <p class="text-sm font-light not-italic">
-        Une histoire géographique du développement des transports publics dans le centre ville de Lausanne.
-      </p>
-    </div>
-  </div>
-
-  <div id="map" class="bg-black"></div>
-
-<div class="py-12 bg-zinc-900 w-full">
-    <div class="w-11/12 md:w-5/6 mx-auto relative px-0"> 
-      <input 
-        type="range" 
-        id="year-slider" 
-        min="0" 
-        max="6" 
-        step="1" 
-        value="0"
-      >
-      <div class="slider-label-container text-zinc-400 text-sm md:text-2xl font-black">
-        <span class="w-0 flex justify-center whitespace-nowrap">1907</span>
-        <span class="w-0 flex justify-center whitespace-nowrap">1925</span>
-        <span class="w-0 flex justify-center whitespace-nowrap">1937</span>
-        <span class="w-0 flex justify-center whitespace-nowrap">1973</span>
-        <span class="w-0 flex justify-center whitespace-nowrap">1983</span>
-        <span class="w-0 flex justify-center whitespace-nowrap">2000</span>
-        <span class="w-0 flex justify-center whitespace-nowrap">2025</span>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="tm-container py-16 text-white font-sans mt-10 w-90vw">
 <!-- ========================================== -->
 <!-- 1. LEB (1873)                              -->
 <!-- ========================================== -->
-<div id="leb-1873" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="leb-1873" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">1873</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">Un train suburbain : le chemin de fer Lausanne-Échallens-Bercher (LEB)</h2>
   
@@ -135,7 +25,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 2. LA FICELLE (1877)                       -->
 <!-- ========================================== -->
-<div id="ficelle-1877" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="ficelle-1877" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">1877</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">L'émergence de la "Ficelle" et la genèse du transport vertical</h2>
   
@@ -161,7 +51,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 3. TRAMWAYS (1896)                         -->
 <!-- ========================================== -->
-<div id="tramways-1896" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="tramways-1896" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">1896</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">La révolution électrique et la naissance des Tramways Lausannois</h2>
   
@@ -192,7 +82,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 4. SIGNAL (1899)                           -->
 <!-- ========================================== -->
-<div id="signal-1899" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="signal-1899" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">1899</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">Inauguration du funiculaire Lausanne-Signal</h2>
   
@@ -217,7 +107,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 5. BUS PRIVÉS (1920)                       -->
 <!-- ========================================== -->
-<div id="bus-1920" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="bus-1920" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">1920</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">L’apparition des premières lignes de bus privées</h2>
   
@@ -243,7 +133,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 6. TROLLEYBUS (1932)                       -->
 <!-- ========================================== -->
-<div id="trolleybus-1932" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="trolleybus-1932" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">1932</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">Le tournant de 1932 : Le trolleybus comme réponse au relief</h2>
   
@@ -271,7 +161,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 7. EXPO 64 (1964)                          -->
 <!-- ========================================== -->
-<div id="expo-1964" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="expo-1964" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">1964</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">L'Expo 64 : L'apothéose de l'automobile et la fin du tramway historique</h2>
   
@@ -304,7 +194,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 8. M1 (1991)                               -->
 <!-- ========================================== -->
-<div id="m1-1991" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="m1-1991" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">1991</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">Genèse du campus EPFL-UNIL et l'avènement du métro M1 (TSOL)</h2>
   
@@ -332,7 +222,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 9. M2 (2008)                               -->
 <!-- ========================================== -->
-<div id="m2-2008" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="m2-2008" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">2008</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">La révolution du M2 : Un record mondial de verticalité</h2>
   
@@ -383,7 +273,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 10. BUS OUEST (2019)                       -->
 <!-- ========================================== -->
-<div id="bus-ouest-2019" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="bus-ouest-2019" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">2019</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">Le défi de l'Ouest et l'essor du bus face au Pôle académique</h2>
   
@@ -409,7 +299,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 11. VENNES (2025)                          -->
 <!-- ========================================== -->
-<div id="vennes-2025" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="vennes-2025" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">2025</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">Densification péri-centrale : L’essor des Fiches-Croisettes-Vennes</h2>
   
@@ -437,7 +327,7 @@ layout: default
 <!-- ========================================== -->
 <!-- 12. FUTUR (2030)                           -->
 <!-- ========================================== -->
-<div id="futur-2030" class="article-historique w-11/12 max-w-6xl mx-auto hidden pb-16 pt-10">
+<div id="futur-2030" class="w-11/12 max-w-6xl pb-16 pt-10">
   <div class="text-red-600 font-black text-2xl mb-2">2030</div>
   <h2 class="text-4xl md:text-5xl font-black italic mb-10 text-zinc-900">Vers 2030 : Le projet "Axes Forts", le Tram T1 et le Métro M3</h2>
   
@@ -481,13 +371,6 @@ layout: default
 </div>
 </div>
 
-</div>
-
-  <div id="intro-texte" class="article-historique w-full md:w-11/12 mx-auto text-center py-20 text-zinc-500 italic">
-    Cliquez sur un marqueur rouge sur la carte pour découvrir les étapes clés de la mobilité lausannoise.
-  </div>
-
-</div>
 
 <div class="w-[100vw] relative left-1/4">
   <div class="w-full md:w-11/12 mx-auto py-20 text-zinc-500">
@@ -510,397 +393,3 @@ layout: default
     </div>
   </div>
 </div>
-
-
-<a href="#top-of-page" id="back-to-top" class="fixed right-10 bottom-10 hidden z-50 bg-white rounded-full p-2 shadow-2xl">
-  <svg width="40" height="40" viewBox="0 0 100 100">
-    <path fill="black" d="m50 0c-13.262 0-25.98 5.2695-35.355 14.645s-14.645 22.094-14.645 35.355 5.2695 25.98 14.645 35.355 22.094 14.645 35.355 14.645 25.98-5.2695 35.355-14.645 14.645-22.094 14.645-35.355-5.2695-25.98-14.645-35.355-22.094-14.645-35.355-14.645zm20.832 62.5-20.832-22.457-20.625 22.457c-1.207 0.74219-2.7656 0.57812-3.7891-0.39844-1.0273-0.98047-1.2695-2.5273-0.58594-3.7695l22.918-25c0.60156-0.61328 1.4297-0.96094 2.2891-0.96094 0.86328 0 1.6914 0.34766 2.293 0.96094l22.918 25c0.88672 1.2891 0.6875 3.0352-0.47266 4.0898-1.1562 1.0508-2.9141 1.0859-4.1133 0.078125z"></path>
-  </svg>
-</a>
-
-<script>
-  (async () => {
-    const yearSteps = [1907, 1925, 1937, 1973, 1983, 2000, 2025];
-    const transportDefinitions = {
-      1907: [
-        {
-          url: "/_file/data/trans_1907/1907_tram.geojson",
-          color: "#b2df8a",
-          weight: 2.5,
-          opacity: 0.9,
-        },
-        {
-          url: "/_file/data/trans_1907/1907_funiculaire.geojson",
-          color: "#fb9a99",
-          weight: 3.2,
-          opacity: 1,
-        },
-        {
-          url: "/_file/data/trans_1907/1907_train.geojson",
-          color: "#e31a1c",
-          weight: 3.2,
-          opacity: 1,
-        },
-      ],
-      1925: [
-        {
-          url: "/_file/data/trans_1925/1925_bus.geojson",
-          color: "#1f78b4",
-          weight: 2.5,
-          opacity: 0.9,
-        },
-        {
-          url: "/_file/data/trans_1925/1925_tram.geojson",
-          color: "#b2df8a",
-          weight: 2.5,
-          opacity: 0.9,
-        },
-        {
-          url: "/_file/data/trans_1925/1925_funiculaire.geojson",
-          color: "#fb9a99",
-          weight: 3.2,
-          opacity: 1,
-        },
-        {
-          url: "/_file/data/trans_1925/1925_train.geojson",
-          color: "#e31a1c",
-          weight: 3.2,
-          opacity: 1,
-        },
-      ],
-      1937: [
-        {
-          url: "/_file/data/trans_1937/1937_tram.geojson",
-          color: "#b2df8a",
-          weight: 2.5,
-          opacity: 0.9,
-        },
-        {
-          url: "/_file/data/trans_1937/1937_funiculaire.geojson",
-          color: "#fb9a99",
-          weight: 3.2,
-          opacity: 1,
-        },
-        {
-          url: "/_file/data/trans_1937/1937_train.geojson",
-          color: "#e31a1c",
-          weight: 3.2,
-          opacity: 1,
-        },
-      ],
-      1973: [
-        {
-          url: "/_file/data/trans_1973/1973_busv3.geojson",
-          color: "#1f78b4",
-          weight: 2.5,
-          opacity: 0.9,
-        },
-        {
-          url: "/_file/data/trans_1973/1973_funi.geojson",
-          color: "#fb9a99",
-          weight: 3.2,
-          opacity: 1,
-        },
-        {
-          url: "/_file/data/trans_1973/1973_ferv2.geojson",
-          color: "#e31a1c",
-          weight: 3.2,
-          opacity: 1,
-        },
-      ],
-      1983: [
-        {
-          url: "/_file/data/trans_1983/rout_ligne_v2.geojson",
-          color: "#1f78b4",
-          weight: 2.5,
-          opacity: 0.9,
-        },
-        {
-          url: "/_file/data/trans_1983/funiculaire.geojson",
-          color: "#fb9a99",
-          weight: 3.2,
-          opacity: 1,
-        },
-        {
-          url: "/_file/data/trans_1983/ferroviaire_v2.geojson",
-          color: "#e31a1c",
-          weight: 3.2,
-          opacity: 1,
-        },
-      ],
-      2000: [
-        {
-          url: "/_file/data/trans_2000/ROUTE_ligne_2000.geojson",
-          color: "#1f78b4",
-          weight: 2.5,
-          opacity: 0.9,
-        },
-        {
-          url: "/_file/data/trans_2000/FUNI_ligne_2000.geojson",
-          color: "#fb9a99",
-          weight: 3.2,
-          opacity: 1,
-        },
-        {
-          url: "/_file/data/trans_2000/FER_ligne_2000.geojson",
-          color: "#e31a1c",
-          weight: 3.2,
-          opacity: 1,
-        },
-      ],
-      2025: [
-        {
-          url: "/_file/data/trans_2025/ROUTE_ligne_2025.geojson",
-          color: "#1f78b4",
-          weight: 2.5,
-          opacity: 0.9,
-        },
-        {
-          url: "/_file/data/trans_2025/FER_ligne_2025.geojson",
-          color: "#e31a1c",
-          weight: 3.2,
-          opacity: 1,
-        },
-      ],
-    };
-
-    const slider = document.getElementById("year-slider");
-    const dateText = document.getElementById("date-text");
-    const backToTop = document.getElementById("back-to-top");
-
-    const map = L.map("map", {
-      minZoom: 12,
-      maxZoom: 16,
-      maxBounds: [
-        [46.48743, 6.51906],
-        [46.59011, 6.74191],
-      ],
-      maxBoundsViscosity: 1,
-    }).setView([46.519, 6.633], 13);
-
-    map.createPane("transportPane");
-    map.getPane("transportPane").style.zIndex = 450;
-
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", {
-      attribution: "&copy; OpenStreetMap",
-    }).addTo(map);
-
-    const activeTransportLayers = L.layerGroup().addTo(map);
-
-    async function loadLayer(definition) {
-      const response = await fetch(definition.url);
-
-      if (!response.ok) {
-        throw new Error(`Unable to load ${definition.url} (${response.status})`);
-      }
-
-      const data = await response.json();
-      return L.geoJSON(data, {
-        pane: "transportPane",
-        style: {
-          color: definition.color,
-          weight: definition.weight,
-          opacity: definition.opacity,
-        },
-      });
-    }
-
-    const transportLayersByYear = {};
-
-    await Promise.all(
-      yearSteps.map(async (year) => {
-        const definitions = transportDefinitions[year] ?? [];
-        transportLayersByYear[year] = await Promise.all(definitions.map(loadLayer));
-      })
-    );
-
-    function showYear(year) {
-      dateText.textContent = String(year);
-      activeTransportLayers.clearLayers();
-
-      const layers = transportLayersByYear[year] ?? [];
-      layers.forEach((layer) => layer.addTo(activeTransportLayers));
-    }
-
-    slider.addEventListener("input", () => {
-      const year = yearSteps[Number(slider.value)] ?? yearSteps[0];
-      showYear(year);
-    });
-
-    const jalonIcon = L.icon({
-      iconUrl: 'https://png.pngtree.com/png-vector/20250429/ourmid/pngtree-3d-red-map-marker-icon-for-accurate-location-pinpointing-png-image_16052221.png', 
-      iconSize: [40, 40],
-      iconAnchor: [20, 40], 
-      popupAnchor: [0, -40],
-    });
-
-    // Vos données historiques extraites du texte
-    const historiquesPinpoints = [
-  {
-    id: "leb-1873",
-    coords: [46.532325, 6.611631], // Tunnel du LEB sous l’avenue d’Échallens
-    titre: "Le chemin de fer LEB",
-    annee: "1873",
-    desc: "De la « Brouette » agricole à un véritable RER suburbain avec l'inauguration du nouveau tunnel.",
-    img: "/_file/examples/static/img/leb-1873.jpg"
-  },
-  {
-    id: "ficelle-1877",
-    coords: [46.510983, 6.627750], // Funiculaire Lausanne-Ouchy
-    titre: "L'émergence de la \"Ficelle\"",
-    annee: "1877",
-    desc: "Mise en service du funiculaire Lausanne-Ouchy, une prouesse technique majeure utilisant l'énergie hydraulique.",
-    img: "/_file/examples/static/img/ficelle.jpg"
-  },
-  {
-    id: "tramways-1896",
-    coords: [46.524361, 6.636965], // Dépôt et centrale électrique
-    titre: "La révolution électrique",
-    annee: "1896",
-    desc: "Inauguration du réseau de tramways électriques, un défi technique audacieux pour vaincre les fortes pentes.",
-    img: "/_file/examples/static/img/tramways-1896.jpg"
-  },
-  {
-    id: "signal-1899",
-    coords: [46.529317, 6.639013], // Funiculaire Lausanne-Signal
-    titre: "Funiculaire Lausanne-Signal",
-    annee: "1899",
-    desc: "Troisième infrastructure à câble de la ville, reliant le Vallon au belvédère du Signal pour le tourisme local.",
-    img: "/_file/examples/static/img/affiche-1899.jpg"
-  },
-  {
-    id: "bus-1920",
-    coords: [46.525365, 6.635896], // Cœur historique (Cité)
-    titre: "Les premières lignes de bus",
-    annee: "1920",
-    desc: "L'autobus devient un complément flexible pour desservir la colline escarpée de la Cité et les plages de l'Ouest.",
-    img: "/_file/examples/static/img/bus-1920.jpg"
-  },
-  {
-    id: "trolleybus-1932",
-    coords: [46.524672, 6.631081], // Accident de tramway / transition
-    titre: "Le tournant du Trolleybus",
-    annee: "1932",
-    desc: "Expérimentation du trolleybus offrant une meilleure adhérence, marquant le début du mouvement vers le « tout-pneu ».",
-    img: "/_file/examples/static/img/trolleybus1932.jpeg"
-  },
-  {
-    id: "expo-1964",
-    coords: [46.517135, 6.603538], // Giratoire de la Maladière
-    titre: "L'Expo 64 et l'automobile",
-    annee: "1964",
-    desc: "Fin des tramways historiques, triomphe de la voiture individuelle et vitrine de transports futuristes.",
-    img: "/_file/examples/static/img/expo64.jpg"
-  },
-  {
-    id: "m1-1991",
-    coords: [46.521666, 6.571846], // Pôle universitaire
-    titre: "L'avènement du métro M1",
-    annee: "1991",
-    desc: "Création du métro léger (TSOL) pour désenclaver les nouvelles hautes écoles de l'Ouest lausannois.",
-    img: "/_file/examples/static/img/m1-1991.svg"
-  },
-  {
-    id: "m2-2008",
-    coords: [46.526183, 6.641558], // CHUV / M2
-    titre: "La révolution du M2",
-    annee: "2008",
-    desc: "Le premier métro automatique de Suisse et le plus pentu au monde résout la fracture topographique nord-sud.",
-    img: "/_file/examples/static/img/m2-2008.svg"
-  },
-  {
-    id: "bus-ouest-2019",
-    coords: [46.524500, 6.575296], // Vortex
-    titre: "L'essor du bus à l'Ouest",
-    annee: "2019",
-    desc: "Densification massive de l'offre routière (bus à haute capacité) pour soutenir la croissance du Pôle académique.",
-    img: "/_file/examples/static/img/bus-ouest-2019.jpg"
-  },
-  {
-    id: "vennes-2025",
-    coords: [46.542005, 6.662521], // Biopôle / Fiches Nord
-    titre: "Densification péri-centrale",
-    annee: "2025",
-    desc: "Restructuration du réseau de bus autour du M2 pour accompagner l'essor de l'éco-quartier des Fiches et du Biopôle.",
-    img: "/_file/examples/static/img/vennes-2025.jfif"
-  },
-  {
-    id: "futur-2030",
-    coords: [46.561196, 6.565426], // Croix-du-Péage (Terminus T1)
-    titre: "Vers 2030 : T1 et M3",
-    annee: "2030",
-    desc: "L'avenir du réseau des axes forts avec le retour du tramway (T1), le nouveau métro M3 et les Bus à Haut Niveau de Service.",
-    img: "/_file/examples/static/img/futur-2030.jfif"
-  }
-];
-    
-
-
-    // Boucle pour créer tous les marqueurs sur la carte
-    historiquesPinpoints.forEach(point => {
-      const marker = L.marker(point.coords, { icon: jalonIcon }).addTo(map);
-      
-      const popupContent = `
-        <div class="custom-popup">
-          <div class="text-xs font-black text-white bg-red-600 inline-block px-2 py-1 rounded mb-2">${point.annee}</div>
-          <h3 class="text-lg font-bold font-sans mt-0 leading-tight text-zinc-900">${point.titre}</h3>
-          <p class="text-sm font-sans mb-1 text-zinc-700 mt-2">${point.desc}</p>
-          <a href="#${point.id}" class="en-lire-plus text-sky-600 hover:text-sky-800 font-bold block mt-2 transition-colors">En lire plus</a>
-          <img src="${point.img}" class="h-40 mx-auto block w-auto mt-3 rounded-sm border border-zinc-200" alt="${point.titre}" onerror="this.style.display='none'"/>
-        </div>
-      `;
-      marker.bindPopup(popupContent, { minWidth: 260 });
-    });
-
-    function updateBackToTop() {
-      const currentScrollY = window.scrollY || document.documentElement.scrollTop;
-      backToTop.classList.toggle("hidden", currentScrollY < 200);
-    }
-
-    window.addEventListener("scroll", updateBackToTop, { passive: true });
-    backToTop.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    document.addEventListener('click', function(e) {
-      if (e.target && e.target.classList.contains('en-lire-plus')) {
-        e.preventDefault();
-        
-        // 1. On récupère l'ID en enlevant le "#"
-        const rawId = e.target.getAttribute('href').replace('#', '');
-        console.log("🔘 Clic détecté ! Recherche de l'article avec l'ID exact : [" + rawId + "]");
-        
-        // 2. On cherche l'élément de manière sécurisée
-        const targetElement = document.getElementById(rawId);
-        
-        if (targetElement) {
-          console.log("✅ Article trouvé dans le HTML ! Défilement en cours...");
-          
-          // Cacher tous les autres articles historiques
-          document.querySelectorAll('.article-historique').forEach(el => {
-            el.classList.add('hidden');
-          });
-
-          // Afficher l'article ciblé
-          targetElement.classList.remove('hidden'); 
-          
-          // Défiler doucement vers l'article
-          const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 50;
-          window.scrollTo({ top: offsetTop, behavior: "smooth" });
-          
-        } else {
-          // L'ERREUR S'AFFICHERA ICI SI LES NOMS NE CORRESPONDENT PAS
-          console.error("❌ ERREUR : Impossible de trouver un <div id='" + rawId + "'> dans votre page HTML. Vérifiez l'orthographe !");
-        }
-      }
-    });
-
-    showYear(yearSteps[Number(slider.value)] ?? yearSteps[0]);
-    updateBackToTop();
-  })().catch((error) => {
-    console.error(error);
-  });
-
-
-</script>
