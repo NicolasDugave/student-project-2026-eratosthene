@@ -262,7 +262,7 @@ layout: default
     <div class="mt-12 md:mt-0 md:w-1/2">
     <img src="static/img/accident-1932.jpg" class="w-full h-auto rounded-lg shadow-xl border border-zinc-200" alt="Accident de tramway et premier trolleybus" />
       <p class="text-sm md:text-base text-zinc-500 mt-3 text-right italic">Le 27 octobre 1913, un tramway est sorti des voies à l'intersection de la rue du Valentin et de l'avenue Vinet, en raison d’une rupture des freins. Collection Daniel Corboz<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">38</sup></p>
-      <img src="static/img/trolleybus1932.jpg" class="w-full h-auto rounded-lg shadow-xl border border-zinc-200" alt="Accident de tramway et premier trolleybus" />
+      <img src="static/img/trolleybus1932.jpeg" class="w-full h-auto rounded-lg shadow-xl border border-zinc-200" alt="Accident de tramway et premier trolleybus" />
       <p class="text-sm md:text-base text-zinc-500 mt-3 text-right italic">Trolleybus en service (1939)<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">39</sup></p>
     </div>
   </div>
