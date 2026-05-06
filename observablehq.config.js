@@ -46,7 +46,9 @@ export default {
       name: "6 - Tests",
       pages: [
         { name: "Cartes",      path: "/examples/11-test-carte" },
-        { name: "Slider",      path: "/examples/12-slider" }
+        { name: "Slider",      path: "/examples/12-slider" },
+        { name: "Analyse historique",      path: "/examples/14-analyse" },
+        { name: "Sources",        path: "/examples/13-sources" },
       ]
     },
   ],
