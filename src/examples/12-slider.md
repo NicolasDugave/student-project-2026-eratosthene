@@ -14,6 +14,7 @@ layout: default
   }
 
   #map {
+    position: relative;
     height: 600px;
     width: 100%;
   }
@@ -38,10 +39,26 @@ layout: default
     margin-top: 1.5rem;
     box-sizing: border-box;
   }
+/* 
+  .leaflet-control-layers {
+    border: 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    overflow: visible;
+    position: relative;
+    z-index: 1200;
+    pointer-events: auto;
+  }
+
+  .leaflet-control-container {
+    z-index: 1200;
+    pointer-events: auto;
+  } */
 </style>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.2/proj4.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 
 <script>
@@ -123,6 +140,12 @@ layout: default
           weight: 3.2,
           opacity: 1,
         },
+        {
+          url: "/_file/data/limits/1907_lim.geojson",
+          color: "#000000",
+          weight: 4,
+          opacity: 1,
+        },
       ],
       1925: [
         {
@@ -149,6 +172,12 @@ layout: default
           weight: 3.2,
           opacity: 1,
         },
+        {
+          url: "/_file/data/limits/1925_lim.geojson",
+          color: "#000000",
+          weight: 4,
+          opacity: 1,
+        },
       ],
       1937: [
         {
@@ -167,6 +196,12 @@ layout: default
           url: "/_file/data/trans_1937/1937_train.geojson",
           color: "#e31a1c",
           weight: 3.2,
+          opacity: 1,
+        },
+        {
+          url: "/_file/data/limits/1937_lim.geojson",
+          color: "#000000",
+          weight: 4,
           opacity: 1,
         },
       ],
@@ -189,6 +224,12 @@ layout: default
           weight: 3.2,
           opacity: 1,
         },
+        {
+          url: "/_file/data/limits/1973_lim.geojson",
+          color: "#000000",
+          weight: 4,
+          opacity: 1,
+        },
       ],
       1983: [
         {
@@ -209,6 +250,12 @@ layout: default
           weight: 3.2,
           opacity: 1,
         },
+        {
+          url: "/_file/data/limits/1983_lim.geojson",
+          color: "#000000",
+          weight: 4,
+          opacity: 1,
+        },
       ],
       2000: [
         {
@@ -227,6 +274,12 @@ layout: default
           url: "/_file/data/trans_2000/FER_ligne_2000.geojson",
           color: "#e31a1c",
           weight: 3.2,
+          opacity: 1,
+        },
+        {
+          url: "/_file/data/limits/2000_lim.geojson",
+          color: "#000000",
+          weight: 4,
           opacity: 1,
         },
       ],
@@ -255,7 +308,7 @@ layout: default
       maxZoom: 16,
       maxBounds: [
         [46.48743, 6.51906],
-        [46.59011, 6.74191],
+        [46.68011, 6.74191],
       ],
       maxBoundsViscosity: 1,
     }).setView([46.519, 6.633], 13);
@@ -263,9 +316,138 @@ layout: default
     map.createPane("transportPane");
     map.getPane("transportPane").style.zIndex = 650;
 
+    // map.createPane("overlayPane");
+    // map.getPane("overlayPane").style.zIndex = 500;
+
+    // map.createPane("limitsPane");
+    // map.getPane("limitsPane").style.zIndex = 700;
+
     L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap",
     }).addTo(map);
+
+    // const transparentTileUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAffm4LQAAAABJRU5ErkJggg==";
+
+
+
+    // const overlayLayerTemplates = {
+    //   "Historical map": {
+    //     1907: "/_file/data/tiles_1907/{z}/{x}/{y}.png",
+    //     1925: "/_file/data/tiles_1925/{z}/{x}/{y}.png",
+    //     1937: "/_file/data/tiles_1937/{z}/{x}/{y}.png",
+    //     1973: "/_file/data/tiles_1973/{z}/{x}/{y}.png",
+    //     1983: "/_file/data/tiles_1983/{z}/{x}/{y}.png",
+    //     2000: "/_file/data/tiles_2000/{z}/{x}/{y}.png",
+    //     // 2025: "/_file/data/tiles_1925/{z}/{x}/{y}.png",
+    //   },
+    //   "Density": {
+    //     1907: "/_file/data/heatmap_1907/{z}/{x}/{y}.png",
+    //     1925: "/_file/data/heatmap_1925/{z}/{x}/{y}.png",
+    //     1937: "/_file/data/heatmap_1937/{z}/{x}/{y}.png",
+    //     1973: "/_file/data/heatmap_1973/{z}/{x}/{y}.png",
+    //     1983: "/_file/data/heatmap_1983/{z}/{x}/{y}.png",
+    //     2000: "/_file/data/heatmap_2000/{z}/{x}/{y}.png",
+    //     2025: "/_file/data/heatmap_1925/{z}/{x}/{y}.png",
+    //   },
+    // };
+
+    // const limitsLayerUrls = {
+    //   // 1907: "/_file/data/limits/limits_1907.geojson",
+    //   1925: "/_file/data/limits/1925_lim.geojson",
+    //   // 1937: "/_file/data/limits/limits_1937.geojson",
+    //   // 1973: "/_file/data/limits/limits_1973.geojson",
+    //   // 1983: "/_file/data/limits/limits_1983.geojson",
+    //   // 2000: "/_file/data/limits/limits_2000.geojson",
+    //   // 2025: "/_file/data/limits/limits_2025.geojson",
+    // };
+
+    // const overlayLayers = {
+    //   "Historical map": L.tileLayer(transparentTileUrl, {
+    //     pane: "overlayPane",
+    //     opacity: 0.7,
+    //     attribution: "Archives de Lausanne",
+    //     minZoom: 12,
+    //     maxZoom: 16,
+    //   }),
+    //   "Density": L.tileLayer(transparentTileUrl, {
+    //     pane: "overlayPane",
+    //     opacity: 0.7,
+    //     attribution: "Archives de Lausanne",
+    //     minZoom: 12,
+    //     maxZoom: 16,
+    //   }),
+    //   "Limits": L.layerGroup(),
+    // };
+
+    // const overlayControl = L.control.layers({}, overlayLayers, {
+    //   collapsed: false,
+    // }).addTo(map);
+
+    // proj4.defs(
+    //   "EPSG:2056",
+    //   "+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs"
+    // );
+
+    // function reprojectCoordinateArray(coords) {
+    //   if (!Array.isArray(coords) || coords.length === 0) return coords;
+    //   if (typeof coords[0] === "number") {
+    //     const [lng, lat] = proj4("EPSG:2056", "EPSG:4326", [coords[0], coords[1]]);
+    //     return [lng, lat];
+    //   }
+    //   return coords.map(reprojectCoordinateArray);
+    // }
+
+    // function reprojectGeoJSONIfNeeded(geojson) {
+    //   const crsName = geojson?.crs?.properties?.name || "";
+    //   if (!crsName.includes("2056")) return geojson;
+
+    //   return {
+    //     ...geojson,
+    //     features: (geojson.features || []).map((feature) => ({
+    //       ...feature,
+    //       geometry: feature.geometry
+    //         ? {
+    //             ...feature.geometry,
+    //             coordinates: reprojectCoordinateArray(feature.geometry.coordinates),
+    //           }
+    //         : feature.geometry,
+    //     })),
+    //   };
+    // }
+
+    function updateOverlayLayers() {}
+
+    // function updateOverlayLayers(year) {
+    //   Object.entries(overlayLayers).forEach(([label, layer]) => {
+    //     if (label === "Limits") {
+    //       // Handle GeoJSON limits layer
+    //       layer.clearLayers();
+    //       const url = limitsLayerUrls[year];
+    //       if (url) {
+    //         fetch(url)
+    //           .then((res) => res.json())
+    //           .then((data) => {
+    //             const projectedData = reprojectGeoJSONIfNeeded(data);
+    //             L.geoJSON(projectedData, {
+    //               pane: "limitsPane",
+    //               style: {
+    //                 color: "#000000",
+    //                 weight: 4,
+    //                 opacity: 0.8,
+    //               },
+    //             }).addTo(layer);
+    //           })
+    //           .catch((err) => console.error(`Failed to load limits for ${year}:`, err));
+    //       }
+    //     } else {
+    //       // Handle tile layer overlays
+    //       const nextUrl = overlayLayerTemplates[label]?.[year] ?? transparentTileUrl;
+    //       if (layer.setUrl) {
+    //         layer.setUrl(nextUrl);
+    //       }
+    //     }
+    //   });
+    // }
 
     const activeTransportLayers = L.layerGroup().addTo(map);
 
@@ -298,6 +480,7 @@ layout: default
 
     function showYear(year) {
       dateText.textContent = String(year);
+      updateOverlayLayers(year);
       activeTransportLayers.clearLayers();
 
       const layers = transportLayersByYear[year] ?? [];
