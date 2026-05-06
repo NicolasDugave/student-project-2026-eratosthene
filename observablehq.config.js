@@ -14,38 +14,38 @@ export default {
         { name: "Reactivity & Inputs",         path: "/examples/02-reactivity" },
       ]
     },
-    {
-      name: "2 - Data & Visualization",
-      pages: [
-        { name: "Loading Data & Tables",       path: "/examples/03-data-tables" },
-        { name: "Charts with Plot",            path: "/examples/04-charts" },
-      ]
-    },
-    {
-      name: "3 - Maps",
-      pages: [
-        { name: "Interactive Maps (Leaflet)",  path: "/examples/05-maps-leaflet" },
-        { name: "Historical Maps (GeoServer)", path: "/examples/06-maps-historical" },
-        { name: "Analytical Maps (Plot)",      path: "/examples/07-maps-plot" },
-      ]
-    },
-    {
-      name: "4 - Data Loaders",
-      pages: [
-        { name: "Processing Data Server-Side",           path: "/examples/08-data-loaders" },
-        { name: "Venice 1740 Land Register (Python Loader)", path: "/examples/09-venice-landregister" },
-      ]
-    },
-    {
-      name: "5 - Complete Example",
-      pages: [
-        { name: "Cadastre Rénové (1888)",      path: "/examples/10-lausanne-cadastre-renove" },
-      ]
-    },
+    // {
+    //   name: "2 - Data & Visualization",
+    //   pages: [
+    //     { name: "Loading Data & Tables",       path: "/examples/03-data-tables" },
+    //     { name: "Charts with Plot",            path: "/examples/04-charts" },
+    //   ]
+    // },
+    // {
+    //   name: "3 - Maps",
+    //   pages: [
+    //     { name: "Interactive Maps (Leaflet)",  path: "/examples/05-maps-leaflet" },
+    //     { name: "Historical Maps (GeoServer)", path: "/examples/06-maps-historical" },
+    //     { name: "Analytical Maps (Plot)",      path: "/examples/07-maps-plot" },
+    //   ]
+    // },
+    // {
+    //   name: "4 - Data Loaders",
+    //   pages: [
+    //     { name: "Processing Data Server-Side",           path: "/examples/08-data-loaders" },
+    //     { name: "Venice 1740 Land Register (Python Loader)", path: "/examples/09-venice-landregister" },
+    //   ]
+    // },
+    // {
+    //   name: "5 - Complete Example",
+    //   pages: [
+    //     { name: "Cadastre Rénové (1888)",      path: "/examples/10-lausanne-cadastre-renove" },
+    //   ]
+    // },
     {
       name: "6 - Tests",
       pages: [
-        { name: "Cartes",      path: "/examples/11-test-carte" },
+        // { name: "Cartes",      path: "/examples/11-test-carte" },
         { name: "Slider",      path: "/examples/12-slider" },
         { name: "Analyse historique",      path: "/examples/14-analyse" },
         { name: "Sources",        path: "/examples/13-sources" },
