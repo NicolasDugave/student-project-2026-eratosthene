@@ -524,9 +524,24 @@ toc: false
 </a>
 
 <script>
-  (async () => {
-    const yearSteps = [1907, 1925, 1937, 1973, 1983, 2000, 2025];
-    const transportDefinitions = {
+(async () => {
+
+  const yearSteps = [1907, 1925, 1937, 1973, 1983, 2000, 2025];
+
+  // Mapping pour SwissTopo (années disponibles)
+  const swissTopoYears = {
+    1907: 19071231,
+    1925: 19251231,
+    1925: 19251231,
+    1925: 19251231,
+    1937: 19371231,
+    1973: 19731231,
+    1983: 19831231,
+    2000: 20001231,
+    2025: 20211231
+  };
+
+  const transportDefinitions = {
       1907: [
         {
           url: "/_file/data/trans_1907/1907_tram.geojson",
@@ -705,9 +720,8 @@ toc: false
       ],
     };
 
-    const slider = document.getElementById("year-slider");
-    const dateText = document.getElementById("date-text");
-    const backToTop = document.getElementById("back-to-top");
+  const slider = document.getElementById("year-slider");
+  const dateText = document.getElementById("date-text");
 
     const map = L.map("map", {
       minZoom: 12,
@@ -719,184 +733,76 @@ toc: false
       maxBoundsViscosity: 1,
     }).setView([46.519, 6.633], 12);
 
-    map.createPane("transportPane");
-    map.getPane("transportPane").style.zIndex = 450;
+  map.createPane("transportPane");
+  map.getPane("transportPane").style.zIndex = 450;
 
-    // map.createPane("overlayPane");
-    // map.getPane("overlayPane").style.zIndex = 500;
+  const activeTransportLayers = L.layerGroup().addTo(map);
 
-    // map.createPane("limitsPane");
-    // map.getPane("limitsPane").style.zIndex = 700;
+  // 🔹 Couche de base dynamique
+  let baseLayer;
 
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", {
-      attribution: "&copy; OpenStreetMap",
-    }).addTo(map);
-
-    // const transparentTileUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAffm4LQAAAABJRU5ErkJggg==";
-
-
-
-    // const overlayLayerTemplates = {
-    //   "Historical map": {
-    //     1907: "/_file/data/tiles_1907/{z}/{x}/{y}.png",
-    //     1925: "/_file/data/tiles_1925/{z}/{x}/{y}.png",
-    //     1937: "/_file/data/tiles_1937/{z}/{x}/{y}.png",
-    //     1973: "/_file/data/tiles_1973/{z}/{x}/{y}.png",
-    //     1983: "/_file/data/tiles_1983/{z}/{x}/{y}.png",
-    //     2000: "/_file/data/tiles_2000/{z}/{x}/{y}.png",
-    //     // 2025: "/_file/data/tiles_1925/{z}/{x}/{y}.png",
-    //   },
-    //   "Density": {
-    //     1907: "/_file/data/heatmap_1907/{z}/{x}/{y}.png",
-    //     1925: "/_file/data/heatmap_1925/{z}/{x}/{y}.png",
-    //     1937: "/_file/data/heatmap_1937/{z}/{x}/{y}.png",
-    //     1973: "/_file/data/heatmap_1973/{z}/{x}/{y}.png",
-    //     1983: "/_file/data/heatmap_1983/{z}/{x}/{y}.png",
-    //     2000: "/_file/data/heatmap_2000/{z}/{x}/{y}.png",
-    //     2025: "/_file/data/heatmap_1925/{z}/{x}/{y}.png",
-    //   },
-    // };
-
-    // const limitsLayerUrls = {
-    //   // 1907: "/_file/data/limits/limits_1907.geojson",
-    //   1925: "/_file/data/limits/1925_lim.geojson",
-    //   // 1937: "/_file/data/limits/limits_1937.geojson",
-    //   // 1973: "/_file/data/limits/limits_1973.geojson",
-    //   // 1983: "/_file/data/limits/limits_1983.geojson",
-    //   // 2000: "/_file/data/limits/limits_2000.geojson",
-    //   // 2025: "/_file/data/limits/limits_2025.geojson",
-    // };
-
-    // const overlayLayers = {
-    //   "Historical map": L.tileLayer(transparentTileUrl, {
-    //     pane: "overlayPane",
-    //     opacity: 0.7,
-    //     attribution: "Archives de Lausanne",
-    //     minZoom: 12,
-    //     maxZoom: 16,
-    //   }),
-    //   "Density": L.tileLayer(transparentTileUrl, {
-    //     pane: "overlayPane",
-    //     opacity: 0.7,
-    //     attribution: "Archives de Lausanne",
-    //     minZoom: 12,
-    //     maxZoom: 16,
-    //   }),
-    //   "Limits": L.layerGroup(),
-    // };
-
-    // const overlayControl = L.control.layers({}, overlayLayers, {
-    //   collapsed: false,
-    // }).addTo(map);
-
-    // proj4.defs(
-    //   "EPSG:2056",
-    //   "+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs"
-    // );
-
-    // function reprojectCoordinateArray(coords) {
-    //   if (!Array.isArray(coords) || coords.length === 0) return coords;
-    //   if (typeof coords[0] === "number") {
-    //     const [lng, lat] = proj4("EPSG:2056", "EPSG:4326", [coords[0], coords[1]]);
-    //     return [lng, lat];
-    //   }
-    //   return coords.map(reprojectCoordinateArray);
-    // }
-
-    // function reprojectGeoJSONIfNeeded(geojson) {
-    //   const crsName = geojson?.crs?.properties?.name || "";
-    //   if (!crsName.includes("2056")) return geojson;
-
-    //   return {
-    //     ...geojson,
-    //     features: (geojson.features || []).map((feature) => ({
-    //       ...feature,
-    //       geometry: feature.geometry
-    //         ? {
-    //             ...feature.geometry,
-    //             coordinates: reprojectCoordinateArray(feature.geometry.coordinates),
-    //           }
-    //         : feature.geometry,
-    //     })),
-    //   };
-    // }
-
-    function updateOverlayLayers() {}
-
-    // function updateOverlayLayers(year) {
-    //   Object.entries(overlayLayers).forEach(([label, layer]) => {
-    //     if (label === "Limits") {
-    //       // Handle GeoJSON limits layer
-    //       layer.clearLayers();
-    //       const url = limitsLayerUrls[year];
-    //       if (url) {
-    //         fetch(url)
-    //           .then((res) => res.json())
-    //           .then((data) => {
-    //             const projectedData = reprojectGeoJSONIfNeeded(data);
-    //             L.geoJSON(projectedData, {
-    //               pane: "limitsPane",
-    //               style: {
-    //                 color: "#000000",
-    //                 weight: 4,
-    //                 opacity: 0.8,
-    //               },
-    //             }).addTo(layer);
-    //           })
-    //           .catch((err) => console.error(`Failed to load limits for ${year}:`, err));
-    //       }
-    //     } else {
-    //       // Handle tile layer overlays
-    //       const nextUrl = overlayLayerTemplates[label]?.[year] ?? transparentTileUrl;
-    //       if (layer.setUrl) {
-    //         layer.setUrl(nextUrl);
-    //       }
-    //     }
-    //   });
-    // }
-
-    const activeTransportLayers = L.layerGroup().addTo(map);
-
-    async function loadLayer(definition) {
-      const response = await fetch(definition.url);
-
-      if (!response.ok) {
-        throw new Error(`Unable to load ${definition.url} (${response.status})`);
-      }
-
-      const data = await response.json();
-      return L.geoJSON(data, {
-        pane: "transportPane",
-        style: {
-          color: definition.color,
-          weight: definition.weight,
-          opacity: definition.opacity,
-        },
-      });
+  function updateBaseMap(year) {
+    if (baseLayer) {
+      map.removeLayer(baseLayer);
     }
 
-    const transportLayersByYear = {};
+    const yearForMap = swissTopoYears[year] || year;
 
-    await Promise.all(
-      yearSteps.map(async (year) => {
-        const definitions = transportDefinitions[year] ?? [];
-        transportLayersByYear[year] = await Promise.all(definitions.map(loadLayer));
-      })
-    );
+    const url = `https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.zeitreihen/default/${yearForMap}/3857/{z}/{x}/{y}.png`;
 
-    function showYear(year) {
-      dateText.textContent = String(year);
-      updateOverlayLayers(year);
-      activeTransportLayers.clearLayers();
-
-      const layers = transportLayersByYear[year] ?? [];
-      layers.forEach((layer) => layer.addTo(activeTransportLayers));
-    }
-
-    slider.addEventListener("input", () => {
-      const year = yearSteps[Number(slider.value)] ?? yearSteps[0];
-      showYear(year);
+    baseLayer = L.tileLayer(url, {
+      attribution: "© SwissTopo",
+      tileSize: 256,
+      opacity: 0.6
     });
+
+    baseLayer.addTo(map);
+  }
+
+  async function loadLayer(definition) {
+    const response = await fetch(definition.url);
+    const data = await response.json();
+
+    return L.geoJSON(data, {
+      pane: "transportPane",
+      style: {
+        color: definition.color,
+        weight: definition.weight,
+        opacity: definition.opacity,
+      },
+    });
+  }
+
+  const transportLayersByYear = {};
+
+  await Promise.all(
+    yearSteps.map(async (year) => {
+      const defs = transportDefinitions[year] ?? [];
+      transportLayersByYear[year] = await Promise.all(defs.map(loadLayer));
+    })
+  );
+
+  function showYear(year) {
+    dateText.textContent = String(year);
+
+    // 🔹 Update fond de carte
+    updateBaseMap(year);
+
+    // 🔹 Update transports
+    activeTransportLayers.clearLayers();
+    const layers = transportLayersByYear[year] ?? [];
+    layers.forEach(layer => layer.addTo(activeTransportLayers));
+  }
+
+  slider.addEventListener("input", () => {
+    const year = yearSteps[Number(slider.value)] ?? yearSteps[0];
+    showYear(year);
+  });
+
+  // 🔹 Initialisation
+  showYear(yearSteps[Number(slider.value)] ?? yearSteps[0]);
+
+
 
     const jalonIcon = L.icon({
       iconUrl: 'https://png.pngtree.com/png-vector/20250429/ourmid/pngtree-3d-red-map-marker-icon-for-accurate-location-pinpointing-png-image_16052221.png', 
