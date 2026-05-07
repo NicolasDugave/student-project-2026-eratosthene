@@ -364,7 +364,7 @@
       </p>
     </div>
     <div class="mt-12 md:mt-0 md:w-1/2">
-      <img src="static/img/futur-2030.jfif" class="w-full h-auto rounded-lg shadow-xl border border-zinc-200" alt="Plan du réseau 2030" />
+      <img src="static/img/futur-2030.jpeg" class="w-full h-auto rounded-lg shadow-xl border border-zinc-200" alt="Plan du réseau 2030" />
       <p class="text-sm md:text-base text-zinc-500 mt-3 text-right italic">Plan du réseau (hors bus) en 2030<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">42</sup></p>
     </div>
   </div>
