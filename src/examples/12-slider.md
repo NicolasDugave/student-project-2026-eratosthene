@@ -1,21 +1,24 @@
 ---
 layout: default
+toc: false
 ---
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap");
 
   .tm-container {
-    width: 90vw !important;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100% !important;
+    /* 90vw for full but it gets displaced by the pop up menu on the left */
+    /* margin-left: auto; 
+    margin-right: auto; */
+    maring: 0 !important;
     display: flex;
     flex-direction: column;
   }
 
   #map {
     position: relative;
-    height: 600px;
+    height: 500px;
     width: 100%;
   }
 
@@ -36,7 +39,7 @@ layout: default
     justify-content: space-between;
     width: 100%;
     padding: 0 16px;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     box-sizing: border-box;
   }
 
@@ -95,7 +98,7 @@ layout: default
         min="0" 
         max="6" 
         step="1" 
-        value="0"
+        value="6"
       >
       <div class="slider-label-container text-zinc-400 text-sm md:text-2xl font-black">
         <span class="w-0 flex justify-center whitespace-nowrap">1907</span>
@@ -476,7 +479,7 @@ layout: default
       </p>
     </div>
     <div class="mt-12 md:mt-0 md:w-1/2">
-      <img src="static/img/futur-2030.jfif" class="w-full h-auto rounded-lg shadow-xl border border-zinc-200" alt="Plan du réseau 2030" />
+      <img src="static/img/futur-2030.jpeg" class="w-full h-auto rounded-lg shadow-xl border border-zinc-200" alt="Plan du réseau 2030" />
       <p class="text-sm md:text-base text-zinc-500 mt-3 text-right italic">Plan du réseau (hors bus) en 2030<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">42</sup></p>
     </div>
   </div>
@@ -710,11 +713,11 @@ layout: default
       minZoom: 12,
       maxZoom: 16,
       maxBounds: [
-        [46.48743, 6.51906],
-        [46.68011, 6.74191],
+        [46.48743, 6.52906],
+        [46.68011, 6.75191],
       ],
       maxBoundsViscosity: 1,
-    }).setView([46.519, 6.633], 13);
+    }).setView([46.519, 6.633], 12);
 
     map.createPane("transportPane");
     map.getPane("transportPane").style.zIndex = 450;
@@ -998,7 +1001,7 @@ layout: default
     titre: "Vers 2030 : T1 et M3",
     annee: "2030",
     desc: "L'avenir du réseau des axes forts avec le retour du tramway (T1), le nouveau métro M3 et les Bus à Haut Niveau de Service.",
-    img: "/_file/examples/static/img/futur-2030.jfif"
+    img: "/_file/examples/static/img/futur-2030.jpeg"
   }
 ];
     
