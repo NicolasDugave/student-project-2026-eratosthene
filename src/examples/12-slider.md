@@ -523,7 +523,7 @@ toc: false
   </svg>
 </a>
 
-<script>
+```js
 (async () => {
 
   const yearSteps = [1907, 1925, 1937, 1973, 1983, 2000, 2025];
@@ -544,25 +544,25 @@ toc: false
   const transportDefinitions = {
       1907: [
         {
-          url: "/_file/data/trans_1907/1907_tram.geojson",
+          data: FileAttachment("../data/trans_1907/1907_tram.geojson"),
           color: "#b2df8a",
           weight: 2.5,
           opacity: 0.9,
         },
         {
-          url: "/_file/data/trans_1907/1907_funiculaire.geojson",
+          data: FileAttachment("../data/trans_1907/1907_funiculaire.geojson"),
           color: "#fb9a99",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/trans_1907/1907_train.geojson",
+          data: FileAttachment("../data/trans_1907/1907_train.geojson"),
           color: "#e31a1c",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/limits/1907_lim.geojson",
+          data: FileAttachment("../data/limits/1907_lim.geojson"),
           color: "#000000",
           weight: 4,
           opacity: 1,
@@ -570,31 +570,31 @@ toc: false
       ],
       1925: [
         {
-          url: "/_file/data/trans_1925/1925_bus.geojson",
+          data: FileAttachment("../data/trans_1925/1925_bus.geojson"),
           color: "#1f78b4",
           weight: 2.5,
           opacity: 0.9,
         },
         {
-          url: "/_file/data/trans_1925/1925_tram.geojson",
+          data: FileAttachment("../data/trans_1925/1925_tram.geojson"),
           color: "#b2df8a",
           weight: 2.5,
           opacity: 0.9,
         },
         {
-          url: "/_file/data/trans_1925/1925_funiculaire.geojson",
+          data: FileAttachment("../data/trans_1925/1925_funiculaire.geojson"),
           color: "#fb9a99",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/trans_1925/1925_train.geojson",
+          data: FileAttachment("../data/trans_1925/1925_train.geojson"),
           color: "#e31a1c",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/limits/1925_lim.geojson",
+          data: FileAttachment("../data/limits/1925_lim.geojson"),
           color: "#000000",
           weight: 4,
           opacity: 1,
@@ -602,25 +602,25 @@ toc: false
       ],
       1937: [
         {
-          url: "/_file/data/trans_1937/1937_tram.geojson",
+          data: FileAttachment("../data/trans_1937/1937_tram.geojson"),
           color: "#b2df8a",
           weight: 2.5,
           opacity: 0.9,
         },
         {
-          url: "/_file/data/trans_1937/1937_funiculaire.geojson",
+          data: FileAttachment("../data/trans_1937/1937_funiculaire.geojson"),
           color: "#fb9a99",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/trans_1937/1937_train.geojson",
+          data: FileAttachment("../data/trans_1937/1937_train.geojson"),
           color: "#e31a1c",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/limits/1937_lim.geojson",
+          data: FileAttachment("../data/limits/1937_lim.geojson"),
           color: "#000000",
           weight: 4,
           opacity: 1,
@@ -628,25 +628,25 @@ toc: false
       ],
       1973: [
         {
-          url: "/_file/data/trans_1973/1973_busv3.geojson",
+          data: FileAttachment("../data/trans_1973/1973_busv3.geojson"),
           color: "#1f78b4",
           weight: 2.5,
           opacity: 0.9,
         },
         {
-          url: "/_file/data/trans_1973/1973_funi.geojson",
+          data: FileAttachment("../data/trans_1973/1973_funi.geojson"),
           color: "#fb9a99",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/trans_1973/1973_ferv2.geojson",
+          data: FileAttachment("../data/trans_1973/1973_ferv2.geojson"),
           color: "#e31a1c",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/limits/1973_lim.geojson",
+          data: FileAttachment("../data/limits/1973_lim.geojson"),
           color: "#000000",
           weight: 4,
           opacity: 1,
@@ -654,25 +654,25 @@ toc: false
       ],
       1983: [
         {
-          url: "/_file/data/trans_1983/rout_ligne_v2.geojson",
+          data: FileAttachment("../data/trans_1983/rout_ligne_v2.geojson"),
           color: "#1f78b4",
           weight: 2.5,
           opacity: 0.9,
         },
         {
-          url: "/_file/data/trans_1983/funiculaire.geojson",
+          data: FileAttachment("../data/trans_1983/funiculaire.geojson"),
           color: "#fb9a99",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/trans_1983/ferroviaire_v2.geojson",
+          data: FileAttachment("../data/trans_1983/ferroviaire_v2.geojson"),
           color: "#e31a1c",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/limits/1983_lim.geojson",
+          data: FileAttachment("../data/limits/1983_lim.geojson"),
           color: "#000000",
           weight: 4,
           opacity: 1,
@@ -680,25 +680,25 @@ toc: false
       ],
       2000: [
         {
-          url: "/_file/data/trans_2000/ROUTE_ligne_2000.geojson",
+          data: FileAttachment("../data/trans_2000/ROUTE_ligne_2000.geojson"),
           color: "#1f78b4",
           weight: 2.5,
           opacity: 0.9,
         },
         {
-          url: "/_file/data/trans_2000/FUNI_ligne_2000.geojson",
+          data: FileAttachment("../data/trans_2000/FUNI_ligne_2000.geojson"),
           color: "#fb9a99",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/trans_2000/FER_ligne_2000.geojson",
+          data: FileAttachment("../data/trans_2000/FER_ligne_2000.geojson"),
           color: "#e31a1c",
           weight: 3.2,
           opacity: 1,
         },
         {
-          url: "/_file/data/limits/2000_lim.geojson",
+          data: FileAttachment("../data/limits/2000_lim.geojson"),
           color: "#000000",
           weight: 4,
           opacity: 1,
@@ -706,13 +706,13 @@ toc: false
       ],
       2025: [
         {
-          url: "/_file/data/trans_2025/ROUTE_ligne_2025.geojson",
+          data: FileAttachment("../data/trans_2025/ROUTE_ligne_2025.geojson"),
           color: "#1f78b4",
           weight: 2.5,
           opacity: 0.9,
         },
         {
-          url: "/_file/data/trans_2025/FER_ligne_2025.geojson",
+          data: FileAttachment("../data/trans_2025/FER_ligne_2025.geojson"),
           color: "#e31a1c",
           weight: 3.2,
           opacity: 1,
@@ -722,6 +722,7 @@ toc: false
 
   const slider = document.getElementById("year-slider");
   const dateText = document.getElementById("date-text");
+  const backToTop = document.getElementById("back-to-top");
 
     const map = L.map("map", {
       minZoom: 12,
@@ -760,8 +761,7 @@ toc: false
   }
 
   async function loadLayer(definition) {
-    const response = await fetch(definition.url);
-    const data = await response.json();
+    const data = await definition.data.json();
 
     return L.geoJSON(data, {
       pane: "transportPane",
@@ -931,14 +931,18 @@ toc: false
 
     function updateBackToTop() {
       const currentScrollY = window.scrollY || document.documentElement.scrollTop;
-      backToTop.classList.toggle("hidden", currentScrollY < 200);
+      if (backToTop) {
+        backToTop.classList.toggle("hidden", currentScrollY < 200);
+      }
     }
 
     window.addEventListener("scroll", updateBackToTop, { passive: true });
-    backToTop.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    if (backToTop) {
+      backToTop.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
 
     document.addEventListener('click', function(e) {
       if (e.target && e.target.classList.contains('en-lire-plus')) {
@@ -978,6 +982,4 @@ toc: false
   })().catch((error) => {
     console.error(error);
   });
-
-
-</script>
+```
