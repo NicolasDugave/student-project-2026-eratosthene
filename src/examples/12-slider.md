@@ -728,8 +728,8 @@ toc: false
       minZoom: 12,
       maxZoom: 16,
       maxBounds: [
-        [46.48743, 6.52906],
-        [46.68011, 6.75191],
+        [46.45, 6.3],
+        [46.7, 6.9],
       ],
       maxBoundsViscosity: 1,
     }).setView([46.519, 6.633], 12);
@@ -819,7 +819,7 @@ toc: false
     titre: "Le chemin de fer LEB",
     annee: "1873",
     desc: "De la « Brouette » agricole à un véritable RER suburbain avec l'inauguration du nouveau tunnel.",
-    img: "/_file/examples/static/img/leb-1873.jpg"
+    img: await FileAttachment("static/img/leb-1873.jpg").url()
   },
   {
     id: "ficelle-1877",
@@ -827,7 +827,7 @@ toc: false
     titre: "L'émergence de la \"Ficelle\"",
     annee: "1877",
     desc: "Mise en service du funiculaire Lausanne-Ouchy, une prouesse technique majeure utilisant l'énergie hydraulique.",
-    img: "/_file/examples/static/img/ficelle.jpg"
+    img: await FileAttachment("static/img/ficelle.jpg").url()
   },
   {
     id: "tramways-1896",
@@ -835,7 +835,7 @@ toc: false
     titre: "La révolution électrique",
     annee: "1896",
     desc: "Inauguration du réseau de tramways électriques, un défi technique audacieux pour vaincre les fortes pentes.",
-    img: "/_file/examples/static/img/tramways-1896.jpg"
+    img: await FileAttachment("static/img/tramways-1896.jpg").url()
   },
   {
     id: "signal-1899",
@@ -843,7 +843,7 @@ toc: false
     titre: "Funiculaire Lausanne-Signal",
     annee: "1899",
     desc: "Troisième infrastructure à câble de la ville, reliant le Vallon au belvédère du Signal pour le tourisme local.",
-    img: "/_file/examples/static/img/affiche-1899.jpg"
+    img: await FileAttachment("static/img/affiche-1899.jpg").url()
   },
   {
     id: "bus-1920",
@@ -851,7 +851,7 @@ toc: false
     titre: "Les premières lignes de bus",
     annee: "1920",
     desc: "L'autobus devient un complément flexible pour desservir la colline escarpée de la Cité et les plages de l'Ouest.",
-    img: "/_file/examples/static/img/bus-1920.jpg"
+    img: await FileAttachment("static/img/bus-1920.jpg").url()
   },
   {
     id: "trolleybus-1932",
@@ -859,7 +859,7 @@ toc: false
     titre: "Le tournant du Trolleybus",
     annee: "1932",
     desc: "Expérimentation du trolleybus offrant une meilleure adhérence, marquant le début du mouvement vers le « tout-pneu ».",
-    img: "/_file/examples/static/img/trolleybus1932.jpeg"
+    img: await FileAttachment("static/img/trolleybus1932.jpeg").url()
   },
   {
     id: "expo-1964",
@@ -867,7 +867,7 @@ toc: false
     titre: "L'Expo 64 et l'automobile",
     annee: "1964",
     desc: "Fin des tramways historiques, triomphe de la voiture individuelle et vitrine de transports futuristes.",
-    img: "/_file/examples/static/img/expo64.jpg"
+    img: await FileAttachment("static/img/expo64.jpg").url()
   },
   {
     id: "m1-1991",
@@ -875,7 +875,7 @@ toc: false
     titre: "L'avènement du métro M1",
     annee: "1991",
     desc: "Création du métro léger (TSOL) pour désenclaver les nouvelles hautes écoles de l'Ouest lausannois.",
-    img: "/_file/examples/static/img/m1-1991.svg"
+    img: await FileAttachment("static/img/m1-1991.svg").url()
   },
   {
     id: "m2-2008",
@@ -883,7 +883,7 @@ toc: false
     titre: "La révolution du M2",
     annee: "2008",
     desc: "Le premier métro automatique de Suisse et le plus pentu au monde résout la fracture topographique nord-sud.",
-    img: "/_file/examples/static/img/m2-2008.svg"
+    img: await FileAttachment("static/img/m2-2008.svg").url()
   },
   {
     id: "bus-ouest-2019",
@@ -891,7 +891,7 @@ toc: false
     titre: "L'essor du bus à l'Ouest",
     annee: "2019",
     desc: "Densification massive de l'offre routière (bus à haute capacité) pour soutenir la croissance du Pôle académique.",
-    img: "/_file/examples/static/img/bus-ouest-2019.jpg"
+    img: await FileAttachment("static/img/bus-ouest-2019.jpg").url()
   },
   {
     id: "vennes-2025",
@@ -899,7 +899,7 @@ toc: false
     titre: "Densification péri-centrale",
     annee: "2025",
     desc: "Restructuration du réseau de bus autour du M2 pour accompagner l'essor de l'éco-quartier des Fiches et du Biopôle.",
-    img: "/_file/examples/static/img/vennes-2025.jfif"
+    img: await FileAttachment("static/img/vennes-2025.jfif").url()
   },
   {
     id: "futur-2030",
@@ -907,7 +907,7 @@ toc: false
     titre: "Vers 2030 : T1 et M3",
     annee: "2030",
     desc: "L'avenir du réseau des axes forts avec le retour du tramway (T1), le nouveau métro M3 et les Bus à Haut Niveau de Service.",
-    img: "/_file/examples/static/img/futur-2030.jpeg"
+    img: await FileAttachment("static/img/futur-2030.jpeg").url()
   }
 ];
     
