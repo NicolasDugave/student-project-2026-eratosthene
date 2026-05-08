@@ -545,13 +545,13 @@ toc: false
       1907: [
         {
           data: FileAttachment("../data/trans_1907/1907_tram.geojson"),
-          color: "#b2df8a",
+          color: "#4a9d01",
           weight: 2.5,
           opacity: 0.9,
         },
         {
           data: FileAttachment("../data/trans_1907/1907_funiculaire.geojson"),
-          color: "#fb9a99",
+          color: "#ce00f8",
           weight: 3.2,
           opacity: 1,
         },
@@ -577,13 +577,13 @@ toc: false
         },
         {
           data: FileAttachment("../data/trans_1925/1925_tram.geojson"),
-          color: "#b2df8a",
+          color: "#4a9d01",
           weight: 2.5,
           opacity: 0.9,
         },
         {
           data: FileAttachment("../data/trans_1925/1925_funiculaire.geojson"),
-          color: "#fb9a99",
+          color: "#ce00f8",
           weight: 3.2,
           opacity: 1,
         },
@@ -603,13 +603,13 @@ toc: false
       1937: [
         {
           data: FileAttachment("../data/trans_1937/1937_tram.geojson"),
-          color: "#b2df8a",
+          color: "#4a9d01",
           weight: 2.5,
           opacity: 0.9,
         },
         {
           data: FileAttachment("../data/trans_1937/1937_funiculaire.geojson"),
-          color: "#fb9a99",
+          color: "#ce00f8",
           weight: 3.2,
           opacity: 1,
         },
@@ -635,7 +635,7 @@ toc: false
         },
         {
           data: FileAttachment("../data/trans_1973/1973_funi.geojson"),
-          color: "#fb9a99",
+          color: "#ce00f8",
           weight: 3.2,
           opacity: 1,
         },
@@ -661,7 +661,7 @@ toc: false
         },
         {
           data: FileAttachment("../data/trans_1983/funiculaire.geojson"),
-          color: "#fb9a99",
+          color: "#ce00f8",
           weight: 3.2,
           opacity: 1,
         },
@@ -687,7 +687,7 @@ toc: false
         },
         {
           data: FileAttachment("../data/trans_2000/FUNI_ligne_2000.geojson"),
-          color: "#fb9a99",
+          color: "#ce00f8",
           weight: 3.2,
           opacity: 1,
         },
