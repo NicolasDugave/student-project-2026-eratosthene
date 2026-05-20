@@ -1,3 +1,97 @@
+<style>
+  /* --- COPIE DE LA SIDEBAR DE L'ACCUEIL --- */
+  :root {
+    --observablehq-max-width: 100% !important; 
+  }
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+  }
+  .observablehq-sidebar, #observablehq-sidebar {
+    width: 16vw !important;
+    min-width: 12vw !important;
+    max-width: 16 !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: 100vh !important;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  .observablehq-sidebar a, #observablehq-sidebar a {
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+  }
+  .observablehq-main {
+    width: 90vw !important;
+    max-width: 90vw !important;
+    margin-left: 10vw !important;
+    padding: 2rem 4rem !important; /* Espacement confortable pour la lecture */
+    box-sizing: border-box;
+    min-height: 100vh !important;
+  }
+
+  /* --- STYLE DE L'ANALYSE HISTORIQUE --- */
+  
+  /* Style des dates pour les faire ressortir */
+  .date-historique {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #e31a1c; /* Reprise du rouge de votre charte graphique */
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    letter-spacing: -0.5px;
+  }
+
+  /* Justification et aération du texte */
+  .analyse-texte p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.7;
+    margin-bottom: 1.2rem; /* Petit espace vide entre les paragraphes */
+    color: #e4e4e7; /* Zinc-200 pour une lecture douce sur fond sombre */
+    font-size: 1.1rem;
+  }
+
+  /* Disposition en colonnes (Texte à gauche / Images à droite) */
+  .section-historique {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-historique {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .analyse-texte {
+      width: 60%; /* Le texte prend 60% de la largeur */
+    }
+    .analyse-images {
+      width: 40%; /* La colonne d'images prend 40% */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; /* Aligne les images contre le bord droit */
+      gap: 1.5rem; /* Espace entre les images si vous en avez plusieurs */
+    }
+  }
+
+  /* Style de base des images pour éviter les débordements */
+  .analyse-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+</style>
+
 <!-- ========================================== -->
 <!-- SECTION SOURCES ET BIBLIOGRAPHIE           -->
 <!-- ========================================== -->
