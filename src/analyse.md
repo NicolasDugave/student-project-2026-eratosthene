@@ -187,7 +187,16 @@
 
 
 <div class="analyse-container text-white font-sans">
-
+  <div id="evenement-12" class="bloc-evenement" style="border-b: none !important;">
+      <h2 class="titre-evenement">Analyse des dynamiques de fréquentation et perspectives de développement</h2>
+      <div class="contenu-split">
+        <div class="colonne-texte">
+          <p>Depuis la fin du XIX<sup>e</sup> siècle, l'évolution du réseau lausannois montre comment les transports ont façonné la ville, bien au-delà du défi technique. Si les collines et les vallées du centre ont d'abord imposé des liaisons verticales uniques pour relier le lac à la cité, l'enjeu a radicalement changé au cours du XX<sup>e</sup> siècle. Avec la poussée démographique et l'étalement urbain, le réseau a dû s'extraire de l'hypercentre pour accompagner la métamorphose des périphéries. Du funiculaire d'Ouchy à l'extension des bus vers l'Ouest universitaire ou les hauts de la Sallaz, les infrastructures ont permis l’urbanisation de la couronne lausannoise, transformant une topographie difficile en un modèle de connexion régionale.<sup>1</sup></p>
+          <p>Ce projet documente l’évolution des réseaux de transports publics lausannois de la fin du XIX<sup>e</sup> siècle à nos jours. Lors de ce travail, plusieurs événements et l’évolution de différents centres d’intérêt de la métropole lausannoise ont été étudiés, afin de comprendre comment le tissu de transport public se développe dans un territoire urbain en expansion. Ce travail a été réalisé à partir de diverses sources cartographiques et historiographiques. En particulier 7 cartes du réseau de transport lausannois ont été analysées dans cette étude.<sup>46-49</sup> Les réseaux de transport (train, tramway, bus, métro et funiculaire) ont été géocodés puis leur évolution a été comparée à celle du bâti à l’aide de cartes historiques.<sup>50</sup></p>
+          <p>Toutefois il est important de préciser que si les cartes les plus récentes (1973 à 2025) sont exhaustives, toutes ne le sont pas. En particulier, la source de 1937 ne représente que le réseau ferré (train, tramway et funiculaire). Quant au réseau de 1925, la date précise de la source est inconnue et, étant éditée par la société des hôteliers de Lausanne, elle ne représente vraisemblablement pas l’ensemble des lignes de bus (probablement privées) présentes à l’époque.</p>
+        </div>
+      </div>
+    </div>
 
 <!-- ========================================== -->
 <!-- 1. LEB (1873)                              -->
@@ -537,25 +546,7 @@
   <!-- ========================================== -->
   <!-- 13. Perspectives de développement                          -->
   <!-- ========================================== -->
-  <div id="evenement-12" class="bloc-evenement" style="border-b: none !important;">
-    <h2 class="titre-evenement">Analyse des dynamiques de fréquentation et perspectives de développement</h2>
-    <div class="contenu-split">
-      <div class="colonne-texte">
-        <p>
-          L'évolution de la fréquentation des transports publics lausannois témoigne d'une transformation profonde des habitudes de mobilité. Au début des années 2000, la gare de Lausanne accueillait environ 25 000 voyageurs quotidiens ; en 2019, ce chiffre est passé à 60 000, soit une hausse de 140%.<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">4</sup> Cette accélération est directement corrélée à l'amélioration de l'offre de transport urbain.
-        </p>
-        <p>
-          Le succès du M2 a agi comme une preuve de concept pour l'ensemble de l'agglomération. En 2008, la fréquentation annuelle du réseau TL était de 71,7 millions de voyageurs. En 2019, elle atteignait 120 millions.<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">4</sup> Malgré l'interruption causée par la pandémie de Covid-19 en 2020, où la fréquentation du M2 a chuté de 31%, la reprise a été extrêmement rapide, dépassant les niveaux de 2019 dès 2023.<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">15</sup>
-        </p>
-        <p>
-          Cette saturation des infrastructures existantes impose des investissements massifs. Le projet de modernisation du M2 et de construction du M3, initialement chiffré à 1,1 milliard de francs en 2018, est désormais estimé à près de 2 milliards en incluant le renchérissement et les adaptations techniques complexes du sous-sol de la gare.<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">26</sup> Ces montants, bien que considérables, sont jugés nécessaires pour éviter la paralysie d'une agglomération qui mise sur la densification vers l'intérieur pour préserver son paysage lémanique.<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">19</sup>
-        </p>
-        <p>
-          L'avenir des transports lausannois se dessine donc sous le signe de l'intermodalité et de la haute performance technologique. L'intégration progressive du LEB (Lausanne-Échallens-Bercher), qui circule désormais toutes les 15 minutes depuis 2020, et le développement du RER Vaud complètent ce dispositif.<sup class="text-sm md:text-base text-red-600 font-bold ml-0.5">16</sup> Lausanne, autrefois pionnière du tramway électrique et du trolleybus, s'impose aujourd'hui comme un modèle de "ville verticale" où la technologie ferroviaire la plus avancée est mise au service d'une urbanité durable et accessible.
-        </p>
-      </div>
-    </div>
-  </div>
+  
 </div>
 
 
