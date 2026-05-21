@@ -282,5 +282,14 @@
         <a href="https://www.24heures.ch/lausanne-lexposition-nationale-secoue-la-suisse-de-1964-135028422209" target="_blank" class="block text-sky-600 hover:text-sky-800 transition-colors break-all mt-0.5">https://www.24heures.ch/lausanne-lexposition-nationale-secoue-la-suisse-de-1964-135028422209</a>
       </li>
     </ol>
+
+  <h3>Sources cartographiques</h3>
+<ol start="46">
+  <li>Cartes transports 1907, 1973, 1983 et 2000 : Archives des Transports publics de la région lausannoise SA</li>
+  <li>Carte transports ca. 1925 : Bibliothèque nationale de France (BnF), Lausanne-Ouchy Plage, Société des Transports de Lausanne, consulté le 19 mai 2026, <a href="https://catalogue.bnf.fr/ark:/12148/cb40695153f" target="_blank" rel="noopener noreferrer">https://catalogue.bnf.fr/ark:/12148/cb40695153f</a></li>
+  <li>Carte transports 1937 : Archives de la Direction Générale de la Mobilité et des Routes</li>
+  <li>Carte transports 2025 : ASIT (Association pour le système d'information du territoire), Carte des transports publics (Géodonnées et plans du réseau) sur le portail de référence <a href="https://viageo.ch" target="_blank" rel="noopener noreferrer">Viageo.ch</a></li>
+  <li>Fonds de cartes : Office fédéral de topographie (swisstopo), Cartes historiques du territoire suisse (Séries temporelles) sur le portail <a href="https://geo.admin.ch" target="_blank" rel="noopener noreferrer">geo.admin.ch</a>, consulté le 19 mai 2026.</li>
+</ol>
   </div>
 </div>
